@@ -1,0 +1,833 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="AI4Science-Research, https://ai4sci-research.github.io" name="keywords">
+    <style media="screen" type="text/css">
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        tt,
+        var,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+            border: 0pt none;
+            font-family: Sans-serif;
+            font-size: 100%;
+            font-style: inherit;
+            font-size: 17px;
+            font-weight: 500;
+            margin: 0pt;
+            outline-color: invert;
+            outline-style: none;
+            outline-width: 0pt;
+            padding: 0pt;
+            vertical-align: baseline;
+        }
+
+        a {
+            color: #1772d0;
+            text-decoration: none;
+        }
+
+        a:focus,
+        a:hover {
+            color: #f09228;
+            text-decoration: none;
+        }
+
+        a.paper {
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        b.paper {
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        * {
+            margin: 0pt;
+            padding: 0pt;
+        }
+
+        body {
+            position: relative;
+            margin: 3em auto 2em auto;
+            width: 800px;
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: 14px;
+            background: #fff;
+        }
+
+        h1 {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: 16pt;
+            font-weight: 700;
+        }
+
+        h2 {
+            border-left: 5px solid green;
+            padding-left: 15px;
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: 15pt;
+            font-weight: 500;
+        }
+
+        h3 {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        strong {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: circle;
+        }
+
+        img {
+            border: none;
+        }
+
+        li {
+            padding-bottom: 0.5em;
+            margin-left: 1.4em;
+        }
+
+        one_sentence {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            /* font-weight: bold; */
+            color: #a005fa;
+        }
+
+        em,
+        i {
+            font-style: italic;
+        }
+
+        div.section {
+            clear: both;
+            margin-bottom: 1.5em;
+            background: #fff;
+        }
+
+        div.category {
+            clear: both;
+            margin-bottom: 1.5em;
+            background: #fff;
+        }
+
+        div.spanner {
+            clear: both;
+        }
+
+        div.paper {
+            clear: both;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            background: #fbfbfb;
+            padding: 1em 1em 1em 1em;
+        }
+
+        div.conf {
+            padding-left: 100px;
+            margin-bottom: 0.3em;
+            background-color: rgb(52, 100, 233);
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            padding: 3px;
+            width: 100px;
+        }
+
+        div.paper_content {
+            padding-left: 260px;
+        }
+
+        img.paper {
+            margin-bottom: 0.5em;
+            float: left;
+            width: 250px;
+        }
+
+        span.blurb {
+            font-style: italic;
+            display: block;
+            margin-top: 0.75em;
+            margin-bottom: 0.5em;
+        }
+
+        pre,
+        code {
+            font-family: 'Lucida Console', 'Andale Mono', 'Courier', monospaced;
+            margin: 1em 0;
+            padding: 0;
+        }
+
+        div.paper pre {
+            font-size: 0.9em;
+        }
+    </style>
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164510176-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164510176-1');
+    </script>
+
+</head>
+
+
+<body>
+<div style="margin-bottom: 1em; border: 1px solid #ddd; background-color: #fff; padding: 1em; height: 150px;">
+    <div style="margin: 0px auto; width: 100%;">
+        <img style="float: left; padding-left: .01em; height: 150px;"
+             src="./resources/images/ai4s.png">
+        <div style="padding-left: 11em; vertical-align: top; height: 120px;">
+            <span style="line-height: 150%; font-size: 20pt;">AI4Science Research Projects</span><br><br>
+            <span style="line-height: 100%; font-size: 13pt; font-style: italic;">❤️ Welcome to our webpage showcasing a collection of projects in the field of AI4Sc4ience. <strong>This platform highlights the collaborative efforts of a group of <a href="#members">individuals/friends</a> from diverse backgrounds united by a common interest in AI4Science research.</strong> </span><br>
+        </div>
+    </div>
+</div>
+<!--<div style="clear: both; background-color: #fff; margin-top: 1.5em; padding: .2em; padding-left: .3em;">-->
+
+
+    <div style="clear: both;">
+        <div class="section">
+            <h1 id="experience">Updates</h1>
+            <div class="paper">
+                <ul>
+            <li>
+                2024-03: 🌟The frist version of the webpage is online. 
+            </li>
+                </ul>
+                <div class="spanner"></div>
+            </div>
+        </div>
+    </div>
+        
+        
+
+<div style="clear: both;">
+    <div class="section">
+        <h1>Introduction
+            <!--[<a href="./resources/cv/wwh_cv.pdf">CV</a>])-->
+        </h1>
+        <div class="paper">
+            A curated selection of AI4science projects in various domains.
+            Each project item provides an short overview into the objectives, methodologies, and outcomes of our research. We aim to share and foster a community of learners interested in the intersection of AI4science. Explore our <a href="#research_works">projects</a>, and we hope they inspire you to delve deeper into the fascinating world of AI4Science.<br>
+            <br>
+            Projets are in the following areas:
+            <ul>
+                <li><a href="#category_bio">🧬 Biology</a></li>
+                <li><a href="#category_drug">💊 Drug Discovery</a></li>
+                <li><a href="#category_llm4science">🐪 LLM4Science</a></li>
+                <li><a href="#category_com_chem">⚛️ Computational Chemistry</a></li>
+                <li><a href="#category_PDE">📈 PDE</a></li>
+            </ul>
+            <!-- Members are from:
+	    <ul>
+            <li><img style="width: 25px;" src="./resources/images/ms.png"></img><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/">Microsoft Research AI4Science</a></li>
+            <li><img style="width: 27px;" src="./resources/images/ustc.png"></img>University of Science and Technology of China</li>
+            <li><img style="width: 27px;" src="./resources/images/ruc.png"></img>Renmin University of China</li>
+            <li><img style="width: 27px;" src="./resources/images/husc.jpg"></img>Huazhong University of Science and Technology</li>
+	    </ul> -->
+            
+         <p>😁<strong style="font-size: 13px;font-style: italic; ">If you would like to join to prompt your research, please contact <a href="mailto:apeterswu@gmail.com">apeterswu@gmail.com</a>. We welcome all friends!</strong></p>
+            <!-- </strong></p>  -->
+        </div>
+    </div>
+</div>
+
+
+<div style="clear: both;">
+    <div class="section"  id="research_works">
+        <h1 id="confpapers">Research  Works</h1> <br>
+
+<!-- Biology Category -->
+        <h2 id="category_bio">Biology</h2>
+
+        <div class="paper">
+            <div class="conf">BIB-2022</div>
+            <img class="paper" src="./resources/paper_icon/bib22_sproberta.jpg">
+            <div class="paper_content">
+                <strong>SPRoBERTa: Protein Embedding Learning with Local Fragment Modeling</strong><br>
+                <h4>Lijun Wu#, Chengcan Yin, Jinhua Zhu, Zhen Wu, Liang He,Yingce Xia, Shufang Xie, Tao Qin, Tie-Yan Liu</h4>
+                <a href="https://academic.oup.com/bib/article/23/6/bbac401/6711410"><img
+                src="https://img.shields.io/badge/BIB_2022-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a>
+                <img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fe18c67b402c402522adee63d53e7dcb0406be2b7%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/protein_pretraining-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <!-- <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> -->
+                <!-- <img src="https://img.shields.io/github/stars/baker-laboratory/RoseTTAFold-All-Atom?color=yellow&style=social"> -->
+                <br>
+                <one_sentence>
+                SPRoBERTa is a protein embedding learning model that leverages local fragment modeling to capture the local structure of proteins.
+                </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>
+        
+        <div class="paper">
+            <div class="conf">Arxiv-2021</div>
+            <img class="paper" src="./resources/paper_icon/arxiv21_pmlm.jpg">
+            <div class="paper_content">
+                <strong>Pre-training Co-evolutionary Protein Representation via A Pairwise Masked Language Model</strong><br>
+                <h4>Liang He, Shizhuo Zhang, Lijun Wu, Huanhuan Xia, Fusong Ju, He Zhang, Siyuan Liu, Yingce Xia, Jianwei Zhu, Pan Deng, Bin Shao, Tao Qin, Tie-Yan Liu</h4>
+                <a href="https://arxiv.org/abs/2110.15527"><img
+                src="https://img.shields.io/badge/Arxiv_2021-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a>
+                <img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F34d079f9fae009fbaf77293163ee6084eb328182%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/protein_pretraining-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <!-- <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> -->
+                <!-- <img src="https://img.shields.io/github/stars/baker-laboratory/RoseTTAFold-All-Atom?color=yellow&style=social"> -->
+                <br>
+                <one_sentence>
+                PMLM is a pairwise masked language model that pre-trains protein representations by co-evolving the protein sequence and structure.
+                </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>
+        
+
+<!-- Drug Category -->
+        <h2 id="category_drug">Drug Discovery</h2>
+
+	<div class="paper">
+        <div class="conf">BIB-2023</div>
+        <img class="paper" src="./resources/paper_icon/bib24_smt_dta.png">
+        <div class="paper_content">
+            <strong>SMT-DTA: Breaking the barriers of data scarcity in drug–target affinity prediction</strong><br>
+		    <h4>Qizhi Pei, Lijun Wu#, Jinhua Zhu, Yingce Xia, Shufang Xie, Tao Qin, Haiguang Liu, Tie-Yan Liu, Rui Yan#</h4>
+            <a href="https://academic.oup.com/bib/article/24/6/bbad386/7333673"><img
+                src="https://img.shields.io/badge/BIB_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a>
+                <img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F42ddab33878113eb9940c20a3cca574a591354e1%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/QizhiPei/SSM-DTA?color=yellow&style=social"> <img src="https://img.shields.io/badge/drug_target_interaction-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            SMT-DTA is a novel drug–target affinity prediction model that breaks the barriers of data scarcity by leveraging the semi-supervised multi-task training strategy.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+	
+	<div class="paper">
+        <div class="conf">NeurIPS-2023</div>
+        <img class="paper" src="./resources/paper_icon/nips23_fabind.png">
+        <div  class="paper_content">
+            <strong>FABind: Fast and Accurate Protein-Ligand Binding</strong><br>
+		    <h4>Qizhi Pei, Kaiyuan Gao, Lijun Wu#, Jinhua Zhu, Yingce Xia, Shufang Xie, Tao Qin, Kun He, Tie-Yan Liu, Rui Yan#</h4>
+            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/aee1de5f335558b546b7e58c380be087-Paper-Conference.pdf"><img
+                src="https://img.shields.io/badge/NeurIPS_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a>
+                <img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fef5fceee2925cb8441bf1de100b67a33eeeef3a3%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/QizhiPei/FABind?color=yellow&style=social"> <img src="https://img.shields.io/badge/blind_rigid_molecular_docking-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            FABind is a fast and accurate protein-ligand binding model that achieves state-of-the-art performance by leveraging a novel FABind layer design and several rational strategies.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+
+    <div class="paper">
+        <div class="conf">ICML-2023</div>
+        <img class="paper" src="./resources/paper_icon/imcl23_pdvn.png">
+        <div  class="paper_content">
+            <strong>Retrosynthetic Planning with Dual Value Networks</strong><br>
+		    <h4>Guoqing Liu, Di Xue, Shufang Xie, Yingce Xia, Austin Tripp, Krzysztof Maziarz, Marwin Segler, Tao Qin#, Zongzhang Zhang, Tie-Yan Liu</h4>
+            <a href="https://proceedings.mlr.press/v202/liu23as/liu23as.pdf"><img
+                src="https://img.shields.io/badge/ICML_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a>
+                <img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F3562e2813c4eec17dc850f5ec3553e2d8399295c%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <!-- <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/QizhiPei/FABind?color=yellow&style=social">  -->
+                <img src="https://img.shields.io/badge/retrosynthesis-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            PDVN is a retrosynthetic planning model that leverages dual value networks to generate high-quality and diverse retrosynthetic routes.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+
+	<div class="paper">
+        <div class="conf">KDD-2022</div>
+        <img class="paper" src="./resources/paper_icon/kdd22_retro.png">
+            <div class="paper_content">
+                <strong>RetroGraph: Retrosynthetic Planning with Graph Search</strong><br>
+		        <h4>Shufang Xie, Rui Yan#, Peng Han#, Yingce Xia, Lijun Wu, Chenjuan Guo, Bin Yang, Tao Qin</h4>
+                <a href="https://arxiv.org/pdf/2206.11477.pdf"><img
+                    src="https://img.shields.io/badge/KDD_2022-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F617f26ac495c4fb1fc97a4b5854901e71b4c3c2a%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                    <!-- <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/teslacool/UnifiedMolPretrain?color=yellow&style=social">  -->
+                    <img src="https://img.shields.io/badge/retrosynthesis-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <br>
+                <one_sentence>
+                RetroGraph is a retrosynthetic planning model that leverages graph search to generate high-quality and diverse retrosynthetic routes.
+                </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>
+
+	    
+
+	<div class="paper">
+        <div class="conf">ICLR-2023</div>
+        <img class="paper" src="./resources/paper_icon/iclr23_ognn.png">
+            <div  class="paper_content">
+                <strong>O-GNN: incorporating ring priors into molecular modeling</strong><br>
+		        <h4>Jinhua Zhu, Kehan Wu, Bohan Wang, Yingce Xia#, Shufang Xie, Qi Meng, Lijun Wu, Tao Qin, Wengang Zhou, Houqiang Li, Tie-Yan Liu</h4>
+                <a href="https://openreview.net/pdf?id=5cFfz6yMVPU"><img
+                    src="https://img.shields.io/badge/ICLR_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a>
+                    <img
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F4cf145c765013f2369a782f9dc308b5a9c0f0f19%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                    <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/O-GNN/O-GNN?color=yellow&style=social"> <img src="https://img.shields.io/badge/molecular_modeling-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <br>
+                <one_sentence>
+                O-GNN is a novel molecular modeling model that incorporates ring priors into the graph neural network to improve the performance of molecular property prediction.
+                </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>
+	    
+    <div class="paper">
+        <div class="conf">ICLR-2023</div>
+        <img class="paper" src="./resources/paper_icon/iclr23_micam.png">
+            <div  class="paper_content">
+                <strong>De Novo Molecular Generation via Connection-aware Motif Mining</strong><br>
+                <h4>Zijie Geng, Shufang Xie#, Yingce Xia, Lijun Wu, Tao Qin, Jie Wang#, Yongdong Zhang, Feng Wu, Tie-Yan Liu</h4>
+                <a href="https://arxiv.org/abs/2302.01129"><img
+                    src="https://img.shields.io/badge/ICLR_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a>
+                    <img
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F26ed17bb45e9fcad97482f0a112f4067785fd301%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                    <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/MIRALab-USTC/AI4Sci-MiCaM?color=yellow&style=social"> <img src="https://img.shields.io/badge/molecular_generation-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <br>
+                <one_sentence>
+                MiCaM is a novel de novo molecular generation model that leverages connection-aware motif mining to generate diverse and high-quality molecules.
+                </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>
+        
+	<div class="paper">
+        <div class="conf">TMLR-2022</div>
+        <img class="paper" src="./resources/paper_icon/tmlr22_dmcg.png">
+            <div class="paper_content">
+                <strong>Direct molecular conformation generation</strong><br>
+		        <h4>Jinhua Zhu, Yingce Xia#, Chang Liu#, Lijun Wu, Shufang Xie, Tong Wang, Yusong Wang, Wengang Zhou, Tao Qin, Houqiang Li, Tie-Yan Liu</h4>
+                <a href="https://arxiv.org/pdf/2202.01356.pdf"><img
+                    src="https://img.shields.io/badge/TMLR_2022-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F636aae3d8028ec550c087573238ef0a1f480383d%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                    <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/DirectMolecularConfGen/DMCG?color=yellow&style=social"> 
+                    <img src="https://img.shields.io/badge/molecular_conformation_generation-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <br>
+                <one_sentence>
+                DMCG is a direct molecular conformation generation model that generates molecular conformations directly from SMILES strings.
+		        </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>
+
+    <div class="paper">
+        <div class="conf">KDD-2023</div>
+        <img class="paper" src="./resources/paper_icon/kdd23_antibody.png">
+            <div class="paper_content">
+                <strong>Pre-training Antibody Language Models for Antigen-Specific Computational Antibody Design</strong><br>
+                <h4>Kaiyuan Gao, Lijun Wu#, Jinhua Zhu, Tianbo Peng, Yingce Xia, Liang He, Shufang Xie, Tao Qin, Haiguang Liu, Kun He, Tie-Yan Liu</h4>
+                <a href="https://dl.acm.org/doi/abs/10.1145/3580305.3599468"><img
+                    src="https://img.shields.io/badge/KDD_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F72b1f5d7314d815dee98844626284aabd5d22bef%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                    <!-- <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/DirectMolecularConfGen/DMCG?color=yellow&style=social">  -->
+                    <img src="https://img.shields.io/badge/antibody_design-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <br>
+                <one_sentence>
+                AbGNN is a pre-training antibody language model that learns antigen-specific antibody representations for computational antibody design.
+                </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>
+
+    <div class="paper">
+        <div class="conf">KDD-2023</div>
+        <img class="paper" src="./resources/paper_icon/kdd23_dvmp.png">
+            <div class="paper_content">
+                <strong>Dual-view Molecular Pre-training</strong><br>
+                <h4>Jinhua Zhu, Yingce Xia#, Tao Qin, Wengang Zhou, Houqiang Li, Tie-Yan Liu</h4>
+                <a href="https://arxiv.org/pdf/2106.10234.pdf"><img
+                    src="https://img.shields.io/badge/KDD_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fc84bec56796f42de783cb12005e001b2c4b1f818%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                    <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/microsoft/DVMP?color=yellow&style=social"> 
+                    <img src="https://img.shields.io/badge/molecule_pretraining-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <br>
+                <one_sentence>
+                DVMP is a dual-view molecular pre-training model that learns molecular representations by jointly pre-training on graph and sequence molecular data.
+                </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>   
+
+    <div class="paper">
+        <div class="conf">KDD-2022</div>
+        <img class="paper" src="./resources/paper_icon/kdd22_2d3d_pretrain.png">
+            <div  class="paper_content">
+                <strong>Unified 2D and 3D Pre-Training of Molecular Representations</strong><br>
+		        <h4>Jinhua Zhu, Yingce Xia#, Lijun Wu, Shufang Xie, Tao Qin, Wengang Zhou, Houqiang Li, Tie-Yan Liu</h4>
+                <a href="https://arxiv.org/pdf/2207.08806.pdf"><img
+                    src="https://img.shields.io/badge/KDD_2022-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F04ae0df1e599bf5cea632c7cdc42686ceb87d428%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                    <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/teslacool/UnifiedMolPretrain?color=yellow&style=social"> <img src="https://img.shields.io/badge/molecule_pretraining-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+                <br>
+                <one_sentence>
+                A unified molecule pre-training model that learns molecular representations by jointly pre-training on 2D and 3D molecular data. 
+                </one_sentence>
+            </div>
+            <div class="spanner"></div>
+        </div>
+    
+
+<!-- LLM4Science Category-->
+<h2 id="category_llm4science">LLM4Science</h2>
+
+<div class="paper">
+    <div class="conf">Arxiv-2024</div>
+    <img class="paper" src="./resources/paper_icon/arxiv24_biot5_plus.png">
+        <div class="paper_content">
+            <strong>BioT5+: Towards Generalized Biological Understanding with IUPAC Integration and Multi-task Tuning</strong><br>
+            <h4>Qizhi Pei, Lijun Wu#, Kaiyuan Gao, Xiaozhuan Liang, Yin Fang, Jinhua Zhu, Shufang Xie, Tao Qin, Rui Yan#</h4>
+            <a href="https://arxiv.org/pdf/2402.17810.pdf"><img
+                src="https://img.shields.io/badge/Arxiv_2024-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Ff740a2474b52675287166a003bd1313f8aabcd68%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/QizhiPei/BioT5?color=yellow&style=social"> 
+                <img src="https://img.shields.io/badge/biomolecule_text_pretraining-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            BioT5+ is a pre-trained language model that integrates IUPAC nomenclature and multi-task tuning to achieve generalized biological understanding, which is an extension of BioT5.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>  
+
+
+<div class="paper">
+    <div class="conf">EMNLP-2023</div>
+    <img class="paper" src="./resources/paper_icon/emnlp23_biot5.png">
+        <div class="paper_content">
+            <strong>BioT5: Enriching Cross-modal Integration in Biology with Chemical Knowledge and Natural Language Associations</strong><br>
+            <h4>Qizhi Pei, Wei Zhang, Jinhua Zhu, Kehan Wu, Kaiyuan Gao, Lijun Wu#, Yingce Xia#, Rui Yan#</h4>
+            <a href="https://arxiv.org/pdf/2310.07276.pdf"><img
+                src="https://img.shields.io/badge/EMNLP_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fc3382fd533b9dd7f8ed7ba7766159079bc1d3935%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/QizhiPei/BioT5?color=yellow&style=social"> 
+                <img src="https://img.shields.io/badge/biomolecule_text_pretraining-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            BioT5 is a pre-trained language model that enriches cross-modal integration in biology with chemical knowledge and natural language associations.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+
+
+<div class="paper">
+    <div class="conf">ACL-2023</div>
+    <img class="paper" src="./resources/paper_icon/acl23_molxpt.png">
+        <div class="paper_content">
+            <strong>MolXPT: Wrapping Molecules with Text for Generative Pre-training</strong><br>
+            <h4>Zequn Liu, Wei Zhang, Yingce Xia#, Lijun Wu, Shufang Xie, Tao Qin, Ming Zhang#, Tie-Yan Liu</h4>
+            <a href="https://arxiv.org/pdf/2305.10688.pdf"><img
+                src="https://img.shields.io/badge/ACL_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fed1353d705eeabc0e916caba5fbae890eefe4f84%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <!-- <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/QizhiPei/BioT5?color=yellow&style=social">  -->
+                <img src="https://img.shields.io/badge/biomolecule_text_pretraining-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            MolXPT is a generative pre-training model that wraps molecules with text to learn molecular representations and generate molecular structures.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+
+
+<div class="paper">
+    <div class="conf">ICLR-2024</div>
+    <img class="paper" src="./resources/paper_icon/iclr24_mol_instruction.png">
+        <div class="paper_content">
+            <strong>Mol-Instructions: A Large-Scale Biomolecular Instruction Dataset for Large Language Models</strong><br>
+            <h4>Yin Fang, Xiaozhuan Liang, Ningyu Zhang#, Kangwei Liu, Rui Huang, Zhuo Chen, Xiaohui Fan, Huajun Chen#</h4>
+            <a href="https://arxiv.org/pdf/2306.08018.pdf"><img
+                src="https://img.shields.io/badge/ICLR_2024-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Ff86aa25603d1f2e4066db9b6a9a6d311b4e8c491%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/zjunlp/Mol-Instructions?color=yellow&style=social"> 
+                <img src="https://img.shields.io/badge/molecular_instruction_dataset-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            Mol-Instructions is a large-scale biomolecular instruction dataset that provides detailed instructions for various biomolecular tasks, which can be used to pre-train large biomolecule language models.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div> 
+
+
+<div class="paper">
+    <div class="conf">Arxiv-2024</div>
+    <img class="paper" src="./resources/paper_icon/arxiv24_survey.png">
+        <div class="paper_content">
+            <strong>Leveraging Biomolecule and Natural Language through Multi-Modal Learning: A Survey</strong><br>
+            <h4>Qizhi Pei, Lijun Wu#, Kaiyuan Gao, Jinhua Zhu, Yue Wang, Zun Wang, Tao Qin, Rui Yan#</h4>
+            <a href="https://arxiv.org/pdf/2403.01528.pdf"><img
+                src="https://img.shields.io/badge/Arxiv_2024-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fc90318dd9ce7a1b0a45d71ceeb555cee3896a618%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/QizhiPei/Awesome-Biomolecule-Language-Cross-Modeling?color=yellow&style=social"> 
+                <img src="https://img.shields.io/badge/biomolecule_text_pretraining_survey-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            This survey paper reviews the recent advances in leveraging biomolecule and natural language through multi-modal learning for various biological tasks.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+    
+
+<div class="paper">
+    <div class="conf">NeurIPS-2023</div>
+    <img class="paper" src="./resources/paper_icon/nips23_mgpt.png">
+        <div  class="paper_content">
+            <strong>De novo Drug Design using Reinforcement Learning with Multiple GPT Agents</strong><br>
+		    <h4>Xiuyuan Hu, Guoqing Liu#, Yang Zhao, Hao Zhang#</h4>
+            <a href="https://proceedings.mlr.press/v202/liu23as/liu23as.pdf"><img
+                src="https://img.shields.io/badge/NeurIPS_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a>
+                <img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F3e5c942d0c9463c6244699d84264bfb3d893ebb2%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/HXYfighter/MolRL-MGPT?color=yellow&style=social"> 
+                <img src="https://img.shields.io/badge/llm4drug-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            MolRL-MGPT is a de novo drug design model that leverages reinforcement learning with multiple GPT agents to generate diverse and high-quality molecules.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+
+
+<div class="paper">
+    <div class="conf">Arxiv-2023</div>
+    <img class="paper" src="./resources/paper_icon/arxiv23_gpt4survey.png">
+        <div class="paper_content">
+            <strong>The impact of large language models on scientific discovery: a preliminary study using gpt-4</strong><br>
+            <h4>Microsoft Research AI4Science, Microsoft Azure Quantum</h4>
+            <a href="https://arxiv.org/pdf/2311.07361.pdf"><img
+                src="https://img.shields.io/badge/Arxiv_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fd8be118ba41df62ca92e49b1f757d53404393529%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/microsoft/LLM4ScientificDiscovery?color=yellow&style=social"> 
+                <img src="https://img.shields.io/badge/llm4science_discovery-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            This paper studies the impact of large language models on scientific discovery using GPT-4, and provides a preliminary analysis of the potential of LLMs in scientific research.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+
+
+<!-- Computation Chemistry Category -->
+<h2 id="category_drug">Computation Chemistry</h2>
+
+<div class="paper">
+    <div class="conf">NeurIPS-2023</div>
+    <img class="paper" src="./resources/paper_icon/nips23_quinnet.png">
+        <div class="paper_content">
+            <strong>Efficiently incorporating quintuple interactions into geometric deep learning force fields</strong><br>
+            <h4>Zun Wang, Guoqing Liu, Yichi Zhou, Tong Wang, Bin Shao</h4>
+            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/f32b13bfc384b3b1d52d675b05f2bece-Paper-Conference.pdf"><img
+                src="https://img.shields.io/badge/NeurIPS_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F04cd78908d551cf8ff422ad1263a0088b42a3e16%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/Zun-Wang/QuinNet?color=yellow&style=social"> 
+                <img src="https://img.shields.io/badge/machine_learning_force_field-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            QuinNet is a geometric deep learning force field that efficiently incorporates quintuple interactions to improve the accuracy of molecular dynamics simulations.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+
+<div class="paper">
+    <div class="conf" style="width: 180px;">Nature Communication-2024</div>
+    <img class="paper" src="./resources/paper_icon/nc24_visnet.webp">
+        <div class="paper_content">
+            <strong>Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing</strong><br>
+            <h4>Yusong Wang, Tong Wang#, Shaoning Li, Xinheng He, Mingyu Li, Zun Wang, Nanning Zheng, Bin Shao, Tie-Yan Liu</h4>
+            <a href="https://www.nature.com/articles/s41467-023-43720-2"><img
+                src="https://img.shields.io/badge/Nature_Communications_2024-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+                src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fe66a427214f6a68d0fae58182ede6cb6ba79167c%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+                <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/microsoft/AI2BMD?color=yellow&style=social"> 
+                <img src="https://img.shields.io/badge/molecular_dynamics-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+            <br>
+            <one_sentence>
+            VisNet is a geometric deep learning model that enhances geometric representations for molecules with equivariant vector-scalar interactive message passing, which improves the performance of molecular dynamics simulations.
+            </one_sentence>
+        </div>
+        <div class="spanner"></div>
+    </div>
+    
+
+
+<!-- PDE Category -->
+<h2 id="category_drug">PDE</h2>
+
+<div class="paper">
+    <div class="conf">ICLR-2024</div>
+    <img class="paper" src="./resources/paper_icon/iclr24_dmm.jpg">
+    <div class="paper_content">
+        <strong>Better Neural PDE Solvers Through Data-Free Mesh Movers</strong><br>
+        <h4>Peiyan Hu, Yue Wang, Zhi-Ming Ma</h4>
+        <a href="https://arxiv.org/pdf/2312.05583.pdf"><img
+            src="https://img.shields.io/badge/ICLR_2024-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+            src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F280271683627def8d021a0cf3d47dd97d30776ef%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+            <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/Peiyannn/MM-PDE?color=yellow&style=social"> 
+            <img src="https://img.shields.io/badge/neural_opertor_learning-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+        <br>
+        <one_sentence>
+        DMM is a data-free mesh mover that can improve the performance of neural PDE solvers by learning the mesh movement strategy, which can be embedded into the neural PDE solver through proper architectural design, called MM-PDE.
+        </one_sentence>
+    </div>
+    <div class="spanner"></div>
+</div>
+
+<div class="paper">
+    <div class="conf">ICML-2023</div>
+    <img class="paper" src="./resources/paper_icon/icml23_stagger.jpg">
+    <div class="paper_content">
+        <strong>NeuralStagger: Accelerating Physics-constrained Neural PDE Solver with Spatial-temporal Decomposition</strong><br>
+        <h4>Xinquan Huang, Wenlei Shi, Qi Meng, Yue Wang, Xiaotian Gao, Jia Zhang, Tie-Yan Liu</h4>
+        <a href="https://proceedings.mlr.press/v202/huang23m/huang23m.pdf"><img
+            src="https://img.shields.io/badge/ICML_2023-5291C8?style=flat&logo=Read.cv&labelColor=555555"/></a><img
+            src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F85f76df0135ea32529cf382e628b38a2dc136bda%3Ffields%3DcitationCount&query=%24.citationCount&label=citation&style=social&labelColor=555555&color=ED8936"/>
+            <!-- <img src="https://img.shields.io/badge/code-38C26D?style=flat&logo=GitHub&labelColor=555555"> <img src="https://img.shields.io/github/stars/Peiyannn/MM-PDE?color=yellow&style=social">  -->
+            <img src="https://img.shields.io/badge/neural_opertor_learning-FD6F6F?style=flat&logo=darkreader&labelColor=555555&logocolor=555555">
+        <br>
+        <one_sentence>
+        NeuralStagger is a physics-constrained neural PDE solver that accelerates the convergence of PDE solvers by spatial-temporal decomposition.
+        </one_sentence>
+    </div>
+    <div class="spanner"></div>
+</div>
+
+
+<!-- awesome-repos -->
+<div style="clear: both;">
+    <div class="section">
+        <h1 id="repo">Awesome-Repos </h1> 
+        <div class="paper">
+        <ul>
+            <li><a href="https://github.com/QizhiPei/Awesome-Biomolecule-Language-Cross-Modeling">Awesome-Biomolecule-Language-Cross-Modeling</a> <img src="https://img.shields.io/github/stars/QizhiPei/Awesome-Biomolecule-Language-Cross-Modeling?color=yellow&style=social"></li>
+            <li><a href="https://github.com/apeterswu/Awesome-Bio-Foundation-Models">Awesome-Bio-Foundation-Models </a> <img src="https://img.shields.io/github/stars/apeterswu/Awesome-Bio-Foundation-Models?color=yellow&style=social"></li>
+            <li><a href="https://github.com/KyGao/awesome-docking">Awesome-Docking</a> <img src="https://img.shields.io/github/stars/KyGao/awesome-docking?color=yellow&style=social"></li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- members -->
+<div style="clear: both;">
+    <div class="section">
+        <h1 id="members">Members </h1> 
+        <div class="paper">
+        <p style="font-size: 15px; font-style: italic;">(ordered by last name)</p>
+        <ul>
+            <li>Kaiyuan Gao, <img style="width: 25px;" src="./resources/images/husc.jpg"></img> Huazhong University of Science and Technology</li>
+            <li>Xiaozhuan Liang, <img style="width: 25px;" src="./resources/images/zju.png"></img> Zhejiang Univeristy </li>
+            <li><a href="https://fiberleif.github.io/">Guoqing Liu</a>, <img style="width: 25px;" src="./resources/images/ms.png"></img> Microsoft Research AI4Science </li>
+            <li><a href="https://qizhipei.github.io/">Qizhi Pei</a>, <img style="width: 25px;" src="./resources/images/ruc.png"></img> Renmin University of China</li>
+	        <li><a href="apeterswu.github.io">Lijun Wu</a>, <img style="width: 25px;" src="./resources/images/ms.png"></img><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/"> Microsoft Research AI4Science</a></li>
+            <li>Yue Wang, <img style="width: 25px;" src="./resources/images/ms.png"></img><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/"> Microsoft Research AI4Science</a></li>
+            <li>Zun Wang, <img style="width: 25px;" src="./resources/images/ms.png"></img><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/"> Microsoft Research AI4Science</a></li>
+            <li><a href="https://www.microsoft.com/en-us/research/people/yinxia/"> Yingce Xia</a>, <img style="width: 25px;" src="./resources/images/ms.png"></img><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/"> Microsoft Research AI4Science</a></li>
+            <li>Shufang Xie, <img style="width: 25px;" src="./resources/images/ms.png"></img><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/"> Microsoft Research AI4Science</a></li>
+            <li>Jinhua Zhu, <img style="width: 25px;" src="./resources/images/ustc.png"></img> University of Science and Technology of China </li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+<div style='width:300px;height:200px;margin:0 auto'>
+    <!--<a href="https://clustrmaps.com/site/1b7cl" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=wHZzsZcsBCB6HxOqmaDqDJX5oLT_yvrQ5HQx9agcvJo&cl=ffffff"></a>-->
+    <!--<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=wHZzsZcsBCB6HxOqmaDqDJX5oLT_yvrQ5HQx9agcvJo&cl=ffffff&w=a"></script>-->
+    <!--<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=ItPniLpvAlUyBKssdgFtKwBDg8lP1ao3ju4dmDzw6uA&cl=ffffff&w=a"></script>-->
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=ItPniLpvAlUyBKssdgFtKwBDg8lP1ao3ju4dmDzw6uA&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+@article{wang2021pvtv2,
+  title={PVTv2: Improved Baselines with Pyramid Vision Transformer},
+  author={Wang, Wenhai and Xie, Enze and Li, Xiang and Fan, Deng-Ping and Song, Kaitao and Liang, Ding and Lu, Tong and Luo, Ping and Shao, Ling},
+  journal={arXiv preprint arXiv:2106.13797},
+  year={2021}
+}

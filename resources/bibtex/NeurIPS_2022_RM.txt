@@ -1,0 +1,6 @@
+@inproceedings{yang2022recursivemix,
+title={Recursivemix: Mixed learning with history},
+author={Yang, Lingfeng and Li, Xiang and Zhao, Borui and Song, Renjie and Yang, Jian},
+booktitle={Advances in Neural Information Processing Systems},
+year={2022}
+}

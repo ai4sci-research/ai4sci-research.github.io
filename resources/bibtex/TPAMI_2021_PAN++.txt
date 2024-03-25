@@ -1,0 +1,9 @@
+@ARTICLE{9423611,
+  author={Wang, Wenhai and Xie, Enze and Li, Xiang and Liu, Xuebo and Liang, Ding and Zhibo, Yang and Lu, Tong and Shen, Chunhua},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={PAN++: Towards Efficient and Accurate End-to-End Spotting of Arbitrarily-Shaped Text}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TPAMI.2021.3077555}}

@@ -1,0 +1,6 @@
+@article{Li2022ummae,
+  author  = {Li, Xiang and Wang, Wenhai and Yang, Lingfeng and Yang, Jian},
+  journal = {arXiv:2205.10063},
+  title   = {Uniform Masking: Enabling MAE Pre-training for Pyramid-based Vision Transformers with Locality},
+  year    = {2022},
+}
