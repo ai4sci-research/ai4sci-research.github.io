@@ -1,7 +1,0 @@
-@inproceedings{li2019understanding,
-title={Understanding the disharmony between dropout and batch normalization by variance shift},
-author={Li, Xiang and Chen, Shuo and Hu, Xiaolin and Yang, Jian},
-booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-pages={2682--2690},
-year={2019}
-}

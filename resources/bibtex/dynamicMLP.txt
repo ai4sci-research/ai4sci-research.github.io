@@ -1,6 +1,0 @@
-@inproceedings{yang2022dynamic,
-  title={Dynamic MLP for Fine-Grained Image Classification by Leveraging Geographical and Temporal Information},
-  author={Yang Lingfeng , Li Xiang, Song Renjie, Zhao Borui, Tao Juntian, Zhou Shihao, Liang Jiajun, Yang Jian},
-  booktitle={CVPR},
-  year={2022}
-}

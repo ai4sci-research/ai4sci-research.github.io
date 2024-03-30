@@ -1,7 +1,0 @@
-@InProceedings{Wang_2019_ICCV,
-author = {Wang, Wenhai and Xie, Enze and Song, Xiaoge and Zang, Yuhang and Wang, Wenjia and Lu, Tong and Yu, Gang and Shen, Chunhua},
-title = {Efficient and Accurate Arbitrary-Shaped Text Detection With Pixel Aggregation Network},
-booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
-month = {October},
-year = {2019}
-}

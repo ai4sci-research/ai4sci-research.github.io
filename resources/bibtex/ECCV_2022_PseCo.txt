@@ -1,6 +1,0 @@
-@InProceedings{li2022pseco,
-  title={PseCo: Pseudo Labeling and Consistency Training for Semi-Supervised Object Detection},
-  author={Li, Gang and Li, Xiang and Wang, Yujie and Zhang, Shanshan and Wu, Yichao and Liang, Ding},
-  booktitle={ECCV},
-  year={2022}
-}

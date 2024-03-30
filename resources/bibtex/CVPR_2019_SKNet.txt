@@ -1,7 +1,0 @@
-@inproceedings{li2019selective,
-title={Selective kernel networks},
-author={Li, Xiang and Wang, Wenhai and Hu, Xiaolin and Yang, Jian},
-booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
-pages={510--519},
-year={2019}
-}
